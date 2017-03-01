@@ -1,0 +1,68 @@
+.intro{
+	display: flex;
+	flex-direction: column;
+}
+
+.welcome{
+	font-family: Avenir;
+	text-transform: uppercase;
+	color: #4CAF50;
+	font-size: 24px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+.separator{
+	margin-top: 1em;
+	width: 100%;
+	background: #8bc34a;
+	background: -webkit-linear-gradient(left, #8bc34a, #4caf50);
+	background: -o-linear-gradient(left, #8bc34a, #4caf50);
+	background: linear-gradient(to right, #8bc34a, #4caf50);
+}
+
+.content{
+	width: 100%;
+	background-image: url('../img/leaves.png');
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	display: flex;
+}
+
+.brief{
+	display: flex;
+	width: 100%;
+	margin-top: 6em;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 3em;
+}
+
+.phrase, .beclean{
+	width: 48%;
+}
+
+.phrase{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.phrase .container{
+	width: 100%;
+	min-height: 200px;
+	padding: 10px;
+	background: #EECDA3; /* fallback for old browsers */
+	background: -webkit-linear-gradient(right, #EECDA3, #EF629F);
+	background: -o-linear-gradient(right, #EECDA3, #EF629F);
+	background: linear-gradient(to left, #EECDA3, #EF629F);
+}
+
+.beclean h2{
+	font-family: BlogScript;
+}
+
+.posts-header{
+	font-family: BlogScript;
+	font-size: 28px;
+}

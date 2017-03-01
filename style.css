@@ -1,0 +1,81 @@
+/*
+Theme Name: BeClean by ANutricional
+Theme URI: http://nuva.rocks/
+Author: Osmar Ramirez
+Author URI: http://nuva.rocks/
+Description: Custom theme for the Nutriologist Mariana García Sarquiz.
+Version: 1.0
+*/
+
+/*------------------------------------------------------------*/
+
+/*-- FONTS --*/
+
+@font-face {
+    font-family: Avenir;
+    src: url(fonts/Avenir.otf);
+}
+
+@font-face {
+    font-family: ProximaNova;
+    src: url(fonts/ProximaNovaThin.otf);
+}
+
+@font-face {
+    font-family: BlogScript;
+    src: url(fonts/BlogScript.otf);
+}
+
+/*-- BASE STYLES --*/
+
+html{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: ProximaNova;
+	font-size: 18px;
+	color: #424242;
+}
+
+.main-container{
+	margin: 0 auto;
+	width: 95%;
+	max-width: 1024px;
+	display: flex;
+	flex-direction: column;
+}
+
+.footer{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 10px;
+	color: #fff;
+	background: #8bc34a; /* fallback for old browsers */
+	background: -webkit-linear-gradient(left, #8bc34a, #4caf50);
+	background: -o-linear-gradient(left, #8bc34a, #4caf50);
+	background: linear-gradient(to right, #8bc34a, #4caf50);
+}
+
+.nuva{
+	width: 130px;
+}
+
+.nuva a{
+	width: 100%;
+}
+
+.nuva a img{
+	width: 100%;
+}
