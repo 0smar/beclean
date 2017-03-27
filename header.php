@@ -13,16 +13,13 @@
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/menu.css">
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/index.css">
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/posts.css">
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/footer.css">
 
 	<script type="text/javascript" src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 </head>
 <body>
 	<div class="header">
-		<div class="logo">
-			<a href="<?php echo get_home_url(); ?>">
-				<img src="<?php bloginfo('template_url'); ?>/img/logo.svg" />
-			</a>
-		</div>
+		
 		<div class="menu">
 			<?php    /**
 				* Displays a navigation menu
@@ -49,4 +46,67 @@
 			
 				wp_nav_menu( $args ); ?>
 		</div>
+
+		<div onclick="openNav()" class="mobile-menu">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
 	</div>
+	<div class="logo-box">
+		<div class="logo">
+			<a href="<?php echo get_home_url(); ?>">
+				<img src="<?php bloginfo('template_url'); ?>/img/logo.svg" />
+			</a>
+		</div>
+		<div class="social-links">
+			<a href="https://www.facebook.com/becleanbyanutricional/" class="social-link-circle">
+				<img src="<?php bloginfo('template_url'); ?>/img/icons-02.png" />
+			</a>
+			<a href="https://www.instagram.com/becleanbyanutricional/" class="social-link-circle">
+				<img src="<?php bloginfo('template_url'); ?>/img/icons-03.png" />
+			</a>
+			<a href="https://www.youtube.com/user/anutricional" class="social-link-circle">
+				<img src="<?php bloginfo('template_url'); ?>/img/icons-04.png" />
+			</a>
+		</div>
+	</div>
+
+	<!-- The overlay -->
+<div id="myNav" class="overlay">
+
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  <!-- Overlay content -->
+  <div class="overlay-content">
+    <?php    /**
+				* Displays a navigation menu
+				* @param array $args Arguments
+				*/
+				$args = array(
+					'theme_location' => '',
+					'menu' => '',
+					'container' => '',
+					'container_class' => false,
+					'container_id' => '',
+					'menu_class' => '',
+					'menu_id' => '',
+					'echo' => true,
+					'fallback_cb' => 'wp_page_menu',
+					'before' => '',
+					'after' => '',
+					'link_before' => '',
+					'link_after' => '',
+					'items_wrap' => '%3$s',
+					'depth' => 0,
+					'walker' => ''
+				);
+			
+				wp_nav_menu( $args ); ?>
+  </div>
+
+</div>
+
+<!-- Use any element to open/show the overlay navigation menu -->
+

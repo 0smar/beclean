@@ -1,11 +1,7 @@
 <?php get_header(); ?>
-<div class="flexie main-container major-center col">
 
-<div class="main-content flexie major-between minor-start">
-
-		<div class="content-area flexie gray col major-between shadow">
-
-			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<div class="main-container">
+	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			
 			<article class="post flexie l-12 col">
 				<div class="post-header flexie l-12 col">
@@ -26,17 +22,6 @@
 			<?php else: ?>
 			<!-- no posts found -->
 			<?php endif; ?>
-
-
-		</div>
-		<?php get_sidebar(); ?>
-		<!-- <div id="sidebar-side" class="widget-area clearfix gray shadow" role="complementary">
-
-			<?php if ( ! dynamic_sidebar( 'sidebar-2' ) ) : ?>   
-
-			<?php endif; // end sidebar widget area ?>
-		</div><!-- #sidebar .widget-area --> 
-	</div>
-
 </div>
+
 <?php get_footer(); ?>

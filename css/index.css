@@ -21,9 +21,14 @@
 	background: linear-gradient(to right, #8bc34a, #4caf50);
 }
 
+.spacer-box{
+	height: 150px;
+	width: 100%;
+}
+
 .content{
 	width: 100%;
-	background-image: url('../img/leaves.png');
+	background-image: url('../img/leaves3.png');
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 	display: flex;
@@ -46,12 +51,19 @@
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
+
 }
 
 .phrase .container{
 	width: 100%;
+	display: flex;
 	min-height: 200px;
 	padding: 10px;
+	font-family: BlogScript;
+	font-size: 28px;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
 	background: #EECDA3; /* fallback for old browsers */
 	background: -webkit-linear-gradient(right, #EECDA3, #EF629F);
 	background: -o-linear-gradient(right, #EECDA3, #EF629F);
@@ -62,7 +74,93 @@
 	font-family: BlogScript;
 }
 
+.cats_section{
+	display: flex;
+	width: 100%;
+	margin-bottom: 4em;
+	justify-content: space-between;
+}
+
+.cats_section a{
+	width: 20%;
+	height: 60px;
+	text-align: center;
+	font-family: BlogScript;
+	font-size: 24px;
+	display: flex;
+	align-items: center;
+	background-image: url('../img/s_leaves.png');
+	background-repeat: no-repeat;
+	background-size: 20%;
+	padding-left: 30px;
+	color: #424242;
+	transition: all 0.2s ease;
+	border-bottom: 2px solid #ffffff;
+}
+
+.cats_section a:hover{
+	background-size: 25%;
+	border-bottom: 2px solid #8bc34a;
+}
+
+.newsletter{
+	width: 100%;
+	margin: 0 auto;
+	border: 2px solid #4caf50;
+	margin-bottom: 4em;
+	display: flex;
+}
+
+.newsletter form{
+	width: 100%;
+}
+
+.newsletter .description{
+	color: #ffffff;
+	text-align: center;
+	font-weight: bold;
+	background-color: #4caf50;
+	width: 100%;
+	padding: 10px;
+}
+
+.newsletter .form{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+	font-family: Avenir;
+
+}
+
+.newsletter .form input[type="email"],
+.newsletter .form input[type="text"]{
+	width: 40%;
+	padding: 5px;
+	font-family: Avenir;
+}
+
+.newsletter .form input[type="submit"]{
+	width: 19%;
+	background-color: #f34235;
+	border: none;
+	color: #fff;
+	font-family: Avenir;
+}
+
 .posts-header{
 	font-family: BlogScript;
 	font-size: 28px;
+}
+
+@media screen and (max-width: 415px) {
+	.welcome{
+		text-align: right;
+		margin-bottom: 20px;
+	}
+
+	.excerpt{
+		text-align: justify;
+	}
+
 }

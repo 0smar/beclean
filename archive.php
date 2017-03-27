@@ -1,10 +1,7 @@
 <?php get_header(); ?>
 
-<div class="flexie main-container major-center col">
+<div class="main-container">
 
-<div class="main-content flexie major-between minor-start">
-
-        <div class="content-area flexie gray col major-between shadow">
 
             <?php if ( have_posts() ) : ?>
  
@@ -12,7 +9,7 @@
                 <h2 class="page-title">
                     <?php
                         if ( is_category() ) {
-                            printf(__('<span class="green"></span><span class="red-h">' . single_cat_title( '', false ) . '</span>'));
+                            printf(__('<span class="green">Categoría: </span><span class="red-h">' . single_cat_title( '', false ) . '</span>'));
              
                         } elseif ( is_tag() ) {
                             printf(__('<span class="green">Etiqueta: </span><span class="red-h">' . single_tag_title( '', false ) . '</span>'));
@@ -71,25 +68,47 @@
                      */
                 ?>
                 
-                <article class="post flexie l-12 major-center col">
-                <div class="post-header flexie l-12 col">
-                    <div class="post-title"><a href="<?php the_permalink(); ?>"> <?php the_title(); ?></a></div>
-                    <div class="post-data"><?php the_date(); ?> por <?php the_author(); ?> en <?php the_category(', '); ?></div>
+                <div class="post-area">
+            
+
+ 
+            
+            <article class="post">
+                <div class="post-content">
+                    <div class="post-header">
+                        <a href="<?php the_permalink(); ?>"> <?php the_title(); ?></a>
+                        <div class="post-date"><?php the_date(); ?> </div>
+                    </div>
+                    <div class="tags"><?php echo the_tags( '#', ' #', '' ); ?></div>
+                    <p class="excerpt text left"><?php the_excerpt(); ?></p>
+                    <div class="post-button">
+                        <a href="<?php echo get_page_link($post_id); ?>">
+                            <div class="post-link"><span style="color: #8BC34A;">Saber</span> <span style="color: #4CAF50;">más</span></div>
+                        </a>
+                    </div>
                 </div>
-                <div class="post-content row left">
-                    <div class="thumbnail left">
+                <div class="post-thumbnail">
+                    <div class="thumbnail">
                         <a href="<?php the_permalink(); ?>">
                             <?php if ( has_post_thumbnail() ){ the_post_thumbnail( 'post-thumb' ); } ?>
                         </a>
                     </div>
-                    <p class="excerpt text left"><?php the_excerpt(); ?></p>
                 </div>
-                <div class="post-button">
-                    <a href="<?php echo get_page_link($post_id); ?>"><div class="post-link red button-shadow">Leer más</div></a>
-                </div>
-
-                <hr>
             </article>
+            <hr style="height: 1px; width: 80%; margin: 2em auto; background-color: rgba(0,0,0,0.15); border: none;">
+
+            <!-- post -->
+
+            <div class="nav-previous flexie row major-center">
+                <div class="flexie green minor-center"><?php next_posts_link( 'Anteriores' ); ?></div>
+            </div>
+            <div class="nav-next flexie row major-center">
+                <div class="flexie green minor-center"><?php previous_posts_link( 'Siguientes' ); ?></div>
+            </div>
+      
+
+
+        </div>
              
             <?php endwhile; ?>
              
@@ -101,14 +120,6 @@
 
 
         </div>
-        <?php get_sidebar(); ?>
-        <!-- <div id="sidebar-side" class="widget-area clearfix gray shadow" role="complementary">
 
-            <?php if ( ! dynamic_sidebar( 'sidebar-2' ) ) : ?>   
 
-            <?php endif; // end sidebar widget area ?>
-        </div><!-- #sidebar .widget-area --> 
-    </div>
-
-</div>
 <?php get_footer(); ?>

@@ -8,9 +8,19 @@
 	align-items: center;
 }
 
+.logo-box{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	position: absolute;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+
 .logo{
-	width: 240px;
-	padding: 16px 0;
+	width: 300px;
+	padding-top: 50px;
 }
 
 .logo img{
@@ -19,8 +29,12 @@
 
 .menu{
 	display: flex;
-	padding: 0 16px;
+	padding: 10px 10px 0px 10px;
+	width: 100%;
+	align-items: center;
+	justify-content: flex-end;
 	font-family: Avenir;
+	background: #8bc34a; /* fallback for old browsers */
 }
 
 .menu-item{
@@ -33,7 +47,8 @@
 .menu-item a{
 	text-decoration: none;
 	margin: 0 8px;
-	color: #424242;
+	font-size: 20px;
+	color: #ffffff;
 }
 
 .menu-hover{
@@ -42,13 +57,161 @@
 	margin-top: 3px;
 	opacity: 0;
 	transition: all 0.4s ease;
-	background: #8bc34a; /* fallback for old browsers */
-	background: -webkit-linear-gradient(left, #8bc34a, #4caf50);
-	background: -o-linear-gradient(left, #8bc34a, #4caf50);
-	background: linear-gradient(to right, #8bc34a, #4caf50); /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: #ffffff; /* fallback for old browsers */
 }
 
 .menu-item:hover .menu-hover{
 	width: 100%;
 	opacity: 1;
+}
+
+.social-links{
+	width: 200px;
+	display: flex;
+	flex-direction: row;
+	margin-left: 1%;
+	align-items: center;
+	justify-content: center;
+}
+
+.social-link-circle{
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	background: #8bc34a; /* fallback for old browsers */
+	background: -webkit-linear-gradient(left, #8bc34a, #4caf50);
+	background: -o-linear-gradient(left, #8bc34a, #4caf50);
+	background: linear-gradient(to right, #8bc34a, #4caf50);
+	margin: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.2s ease;
+}
+
+.social-link-circle img{
+	width: 23px;
+}
+
+.social-link-circle:hover{
+	transform: scale(1.1, 1.1);
+}
+
+a{
+	text-decoration: none;
+}
+
+ul, li{
+	list-style: none;
+}
+
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+    height: 0;
+    width: 100%;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background: #8bc34a; /* fallback for old browsers */
+	background: -webkit-linear-gradient(top, rgba(139,195,74,0.95), rgba(76,175,80,0.95));
+	background: -o-linear-gradient(top, rgba(139,195,74,0.95), rgba(76,175,80,0.95));
+	background: linear-gradient(to bottom, rgba(139,195,74,0.95), rgba(76,175,80,0.95));
+    overflow-x: hidden; /* Disable horizontal scroll */
+    overflow-y: hidden;
+    transition: 0.4s ease; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #fff;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+.mobile-menu{
+	width: 25px;
+	margin-right: 30px;
+	margin-top: 30px;
+	display: none;
+}
+
+.mobile-menu div{
+	width: 100%;
+	height: 3px;
+	background-color: #8bc34a;
+	margin: 5px 0;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-width: 1025px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+
+    .mobile-menu{
+    	display: block;
+    }
+
+    .menu{
+    	display: none;
+    }
+
+    .header{
+    	align-items: flex-start;
+    }
+
+    .social-links{
+    	flex-direction: row;
+    	width: 150px;
+    	margin-left: 2%;
+    }
+
+    .social-link-circle{
+    	width: 30px;
+    	height: 30px;
+    }
+
+    .social-links img{
+    	width: 20px;
+    }
+}
+
+@media screen and (max-width: 415px) {
+	.header .logo{
+		width: 200px;
+	}
+
+	.social-links{
+
+	}
 }

@@ -74,3 +74,39 @@
 .thumbnail a img{
 	width: 100%;
 }
+
+/*- SINGLE -*/
+
+.single{
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+.single .post-header{
+	flex-direction: column;
+}
+
+.single .post-title a{
+	font-size: 2em;
+}
+
+.single .post-date a{
+	font-family: Avenir;
+	font-size: 1em;
+}
+
+.single .post-content{
+	width: 100%;
+	text-align: justify;
+}
+
+.edit-button{
+	display: flex;
+	align-items: flex-start;
+}
+
+.edit-button a{
+	color: #F44336;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}

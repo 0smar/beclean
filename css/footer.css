@@ -1,0 +1,24 @@
+.footer-box{
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.footer-box .separator{
+	margin-bottom: 10px;
+}
+
+.announcements{
+	width: 60%;
+
+}
+
+.footer-logo-cont{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.favs{
+	width: 30%;
+}
