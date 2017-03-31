@@ -2,15 +2,22 @@
 
 <div class="content">
 	<div class="main-container">
-		<div class="spacer-box"></div>
+		
 		<div class="brief">
 			<div class="phrase">
-				<div class="container" id="gradient">
+				<div class="container">
 					<?php $post_id = 164; // assign post id
 		                $queried_post = get_page($post_id);
 		                if(is_home()) {  ?>
-		                
-		                	<?php echo $queried_post->post_content;  ?>
+		                	<?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post_id), 'full'); ?>
+		                	<style>
+							  .phrase .container {
+							    background-image: url('<?php echo $image[0]; ?>');
+							  }
+							</style>
+		                	<div class="phrase-text">
+		                		<?php echo $queried_post->post_content;  ?>
+		                	</div>
 		                	
 		            <?php  } ?>
 				</div>
@@ -31,16 +38,16 @@
 		</div>
 		<div class="cats_section">
 			<a href="<?php $nutribooks = get_cat_ID( 'Hogar' ); echo get_category_link( $nutribooks ) ?>" class="flexie nutri-link space-top gray redapple shadow button-shadow">
-				Hogar
+				Alimentación
 			</a>
 			<a href="<?php $nutrivlogs = get_cat_ID( 'Belleza' ); echo get_category_link( $nutrivlogs ) ?>" class="flexie nutri-link gray greenapple space-top shadow button-shadow">
 				Belleza
 			</a>
 			<a href="<?php $nutriprogramas = get_cat_ID( 'Tips' ); echo get_category_link( $nutriprogramas ) ?>" class="flexie nutri-link gray redapple space-top shadow button-shadow">
-				Tips
+				Hogar
 			</a>
 			<a href="<?php $nutriretos = get_cat_ID( 'Organizacion' ); echo get_category_link( $nutriretos ) ?>" class="flexie nutri-link gray greenapple space-top shadow button-shadow">
-				Organización
+				Inspiración
 			</a>
 		</div>
 		<div class="newsletter">
@@ -80,11 +87,11 @@
 	            	</div>
 				</div>
 				<div class="post-thumbnail">
-					<div class="thumbnail">
-						<a href="<?php the_permalink(); ?>">
-							<?php if ( has_post_thumbnail() ){ the_post_thumbnail( 'post-thumb' ); } ?>
-						</a>
-					</div>
+					<a href="<?php the_permalink(); ?>">
+						<div class="thumbnail">
+							<?php if ( has_post_thumbnail() ){ the_post_thumbnail( 'large' ); } ?>
+						</div>
+					</a>
 				</div>
 			</article>
 			<hr style="height: 1px; width: 80%; margin: 2em auto; background-color: rgba(0,0,0,0.15); border: none;">

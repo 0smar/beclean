@@ -56,7 +56,7 @@
 	<div class="logo-box">
 		<div class="logo">
 			<a href="<?php echo get_home_url(); ?>">
-				<img src="<?php bloginfo('template_url'); ?>/img/logo.svg" />
+				<img src="<?php bloginfo('template_url'); ?>/img/logonew.jpg" />
 			</a>
 		</div>
 		<div class="social-links">

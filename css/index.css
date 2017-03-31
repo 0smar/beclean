@@ -28,16 +28,13 @@
 
 .content{
 	width: 100%;
-	background-image: url('../img/leaves3.png');
-	background-size: 100% auto;
-	background-repeat: no-repeat;
 	display: flex;
 }
 
 .brief{
 	display: flex;
 	width: 100%;
-	margin-top: 6em;
+	margin-top: 3em;
 	justify-content: space-between;
 	align-items: center;
 	margin-bottom: 3em;
@@ -51,6 +48,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
+	
 
 }
 
@@ -64,10 +62,13 @@
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	background: #EECDA3; /* fallback for old browsers */
-	background: -webkit-linear-gradient(right, #EECDA3, #EF629F);
-	background: -o-linear-gradient(right, #EECDA3, #EF629F);
-	background: linear-gradient(to left, #EECDA3, #EF629F);
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.phrase-text{
+	color: #fff;
+	text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
 }
 
 .beclean h2{
@@ -106,7 +107,7 @@
 .newsletter{
 	width: 100%;
 	margin: 0 auto;
-	border: 2px solid #4caf50;
+	border: 2px solid #99ca3c;
 	margin-bottom: 4em;
 	display: flex;
 }
@@ -119,7 +120,7 @@
 	color: #ffffff;
 	text-align: center;
 	font-weight: bold;
-	background-color: #4caf50;
+	background-color: #99ca3c;
 	width: 100%;
 	padding: 10px;
 }

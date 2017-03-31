@@ -22,7 +22,7 @@
 
 .post-header a{
 	font-family: BlogScript;
-	color: #4CAF50;
+	color: #99ca3c;
 	text-decoration: none;
 	font-size: 20px;
 }
@@ -63,17 +63,29 @@
 
 .post-thumbnail{
 	width: 35%;
+	height: 220px;
 	display: flex;
 	justify-content: flex-end;
+	overflow: hidden;
+}
+
+.post-thumbnail a{
+	width: 100%;
 }
 
 .thumbnail{
 	width: 100%;
+	object-fit: cover;
+	object-position: 50% 50%;
+	
 }
 
-.thumbnail a img{
+.thumbnail img{
 	width: 100%;
+	object-fit: cover;
+	object-position: 50% 50%;
 }
+
 
 /*- SINGLE -*/
 
