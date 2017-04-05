@@ -122,3 +122,23 @@
 	text-transform: uppercase;
 	margin-bottom: 10px;
 }
+
+@media screen and (max-width: 415px) {
+	.post{
+		flex-direction: column-reverse;
+	}
+
+	.post-content{
+		width: 95%;
+		margin-top: 1em;
+	}
+
+	.post-thumbnail{
+		width: 95%;
+		height: 150px;
+	}
+
+	.post-header{
+		flex-direction: column;
+	}
+}

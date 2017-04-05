@@ -22,3 +22,31 @@
 .favs{
 	width: 30%;
 }
+
+@media screen and (max-width: 415px) {
+	.footer-box{
+		flex-direction: column;
+	}
+
+	.announcements{
+		width: 95%;
+	}
+
+	.footer-logo-cont .logo{
+		width: 45% !important;
+		margin-top: 0;
+	}
+
+	.favs{
+		width: 95%;
+		margin-bottom: 1em;
+	}
+
+	.footer {
+		flex-direction: column;
+		padding-top: 10px;
+	}
+	.nuva{
+		margin-top: 10px;
+	}
+}

@@ -11,6 +11,7 @@
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
+	position: relative;
 }
 
 .logo-box{
@@ -32,12 +33,16 @@
 
 .menu{
 	display: flex;
-	padding: 10px 10px 0px 10px;
+	padding: 20px 10px 0px 10px;
 	width: 100%;
 	align-items: center;
 	justify-content: flex-end;
-	font-family: Avenir;
+	font-family: BlogScript;
 	background: #99ca3c; /* fallback for old browsers */
+}
+
+.menu li{
+	font-family: BlogScript;
 }
 
 .menu-item{
@@ -45,6 +50,7 @@
 	display: flex;
 	flex-direction: column;
 	margin: 0 5px;
+	font-family: BlogScript;
 }
 
 .menu-item a{
@@ -52,6 +58,7 @@
 	margin: 0 8px;
 	font-size: 20px;
 	color: #ffffff;
+	font-family: BlogScript;
 }
 
 .menu-hover{
@@ -162,7 +169,10 @@ ul, li{
 	width: 25px;
 	margin-right: 30px;
 	margin-top: 30px;
+	position: absolute;
 	display: none;
+	right: 0px;
+	top: 0px;
 }
 
 .mobile-menu div{
