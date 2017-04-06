@@ -116,6 +116,18 @@
 				);
 			
 				wp_nav_menu( $args ); ?>
+				<?php
+				if ( is_user_logged_in() ) { ?>
+				     
+				    <li class="menu-item"><a href="<?php echo admin_url(); ?>">Panel de Administrador</a></li>
+				    <li class="menu-item"><a href="<?php echo wp_logout_url( home_url() ); ?>">Salir</a></li>
+				    <?php
+				} else {
+					?>
+				    <li class="menu-item"><a href="<?php echo wp_login_url(); ?>">Iniciar Sesión </a></li>
+				    <?php
+				}
+				?>
   </div>
 
 </div>
